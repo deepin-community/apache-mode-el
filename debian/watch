@@ -1,0 +1,4 @@
+version=4
+opts="filenamemangle=s/(?:.*?)?v?(\d[\d.]*)\.tar\.gz/apache-mode-$1.tar.gz/" \
+    https://github.com/emacs-php/apache-mode/tags \
+    (?:.*?/)?v?(\d[\d.]*)\.tar\.gz debian uupdate
