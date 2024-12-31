@@ -1,0 +1,27 @@
+Forwarded: https://github.com/emacs-php/apache-mode/pull/2
+From: Nicholas D Steeves <nsteeves@gmail.com>
+Date: Mon, 8 Jul 2019 13:32:28 -0400
+Subject: Change "temporary" keyword to "temp"
+
+  temp
+  Returns a temporary redirect status (302). This is the default.
+  https://httpd.apache.org/docs/2.4/mod/mod_alias.html
+
+Fix for Debian bug #799355
+---
+ apache-mode.el | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/apache-mode.el b/apache-mode.el
+index 80837a9..c6d04d0 100644
+--- a/apache-mode.el
++++ b/apache-mode.el
+@@ -1033,7 +1033,7 @@
+         "SuppressSize"
+         "SymLinksIfOwnerMatch"
+         "sysvsem"
+-        "temporary"
++        "temp"
+         "tpfcore"
+         "unformatted"
+         "unset"

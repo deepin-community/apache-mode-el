@@ -1,15 +1,23 @@
-Source: template-repository
-Section: unknown
+Source: apache-mode-el
+Section: editors
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Build-Depends: debhelper-compat (= 13),
+ dh-elpa
+Rules-Requires-Root: no
+Standards-Version: 4.6.1
+Vcs-Browser: https://salsa.debian.org/emacsen-team/apache-mode-el
+Vcs-Git: https://salsa.debian.org/emacsen-team/apache-mode-el.git
+Homepage: https://github.com/emacs-php/apache-mode
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: elpa-apache-mode
+Architecture: all
+Depends: ${elpa:Depends}, ${misc:Depends}
+Recommends: emacs
+Enhances: emacs
+Description: Emacs major mode for editing Apache configuration files
+ apache-mode.el provides fontification when editing Apache
+ configuration files.
+ .
+ This is Kenta Usami's version, which is a descendent of Jonathan Marten
+ and Karl Chen's version distributed on emacswiki.
